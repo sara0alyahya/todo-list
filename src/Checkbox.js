@@ -16,11 +16,23 @@ class Checkbox extends React.Component {
         // console.log(this.state);
 
         return (
-            <div >
+            <div className='secondDiv'>
+
                 {this.props.todo === "" ? "" : (
                     <div>
-                        <p className={this.state.checked} onClick={this.change}>
-                            <input type='checkbox' /> {this.props.todo} <label className='label' onClick={() => this.props.removeItem(this.props.index)} > X </label> </p>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                        <div className="center">
+                            <label className="labelT">
+                                <input className="label__checkbox" type="checkbox" onClick={this.change} />
+                                <span className="label__text">
+                                    <span className="label__check">
+                                        <i className="fa fa-check icon"></i>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <p className={this.state.checked} >
+                            {this.props.todo} <label className='labelX' onClick={() => this.props.removeItem(this.props.index)} > X </label> </p>
 
                     </div>)}
 

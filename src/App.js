@@ -65,7 +65,7 @@ import Checkbox from './Checkbox';
 class App extends Component {
   state = {
     formData: {
-      todoInfo: ''
+      todoInfo: ' '
     },
     list: [],
 
@@ -95,7 +95,7 @@ class App extends Component {
     })
     // console.log(this.state.list)
   }
-  deleteItem = (event) => {
+  deleteItems = (event) => {
     this.setState({
       list: [],
 
@@ -104,8 +104,8 @@ class App extends Component {
 
   removeItem = (index) => {
     console.log(index);
-    const copy = this.state.list.splice({})
-    copy.pop(this.state.formData.todoInfo)
+    const copy = this.state.list
+    copy.splice(index, 1)
     this.setState({
       list: copy,
     })
@@ -116,18 +116,21 @@ class App extends Component {
     const list = this.state.list.map((todo, index) => <Checkbox todo={todo} index={index} removeItem={this.removeItem} />)
 
     return (
-      <div>
-        {/* <h1>hi</h1> */}
+      <div className='mainDiv'>
         <form onSubmit={this.submitForm}>
-
+          <br />
+          <br />
           <label> <h1>Todos </h1> <br />
-            <input type='text' name='todoInfo' className='input' onChange={this.updateForm} value={this.state.formData.todoInfo} placeholder={"What need to be done !"}></input>
+            <input type='text' name='todoInfo' className='input' onChange={this.updateForm} value={this.state.formData.todoInfo} placeholder={"What's need to be done !"}></input>
 
           </label>
           <button type='submit' > Add ! </button>
-          <button onClick={this.deleteItem}> Delete ! </button>
+          <button onClick={this.deleteItems}> Delete ! </button>
         </form>
         {list}
+        {/* <div className='qoute'>
+          <p>Made with 💜 ― SARA ALYAHYA</p>
+        </div> */}
       </div>
     );
   }
