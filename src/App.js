@@ -119,14 +119,13 @@ class App extends Component {
       <div>
         {/* <h1>hi</h1> */}
         <form onSubmit={this.submitForm}>
+
           <label> <h1>Todos </h1> <br />
-            <input type='text' name='todoInfo' className='todoinput' onChange={this.updateForm} value={this.state.formData.todoInfo} placeholder={"What need to be done !"}></input>
+            <input type='text' name='todoInfo' className='input' onChange={this.updateForm} value={this.state.formData.todoInfo} placeholder={"What need to be done !"}></input>
 
           </label>
           <button type='submit' > Add ! </button>
           <button onClick={this.deleteItem}> Delete ! </button>
-          <p> <span></span></p>
-
         </form>
         {list}
       </div>

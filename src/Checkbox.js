@@ -11,13 +11,7 @@ class Checkbox extends React.Component {
             this.setState({ checked: 'false' })
         }
     }
-    // display = () => {
-    //     if (this.state.delete === 'false') {
-    //         this.setState({ formDisplay: 'checked' });
-    //     } else {
-    //         this.setState({ formDisplay: 'false' })
-    //     }
-    // }
+
     render() {
         // console.log(this.state);
 
@@ -26,8 +20,8 @@ class Checkbox extends React.Component {
                 {this.props.todo === "" ? "" : (
                     <div>
                         <p className={this.state.checked} onClick={this.change}>
-                            <input type='checkbox' /> {this.props.todo}</p>
-                        <button onClick={() => this.props.removeItem(this.props.index)} > X </button>
+                            <input type='checkbox' /> {this.props.todo} <label className='label' onClick={() => this.props.removeItem(this.props.index)} > X </label> </p>
+
                     </div>)}
 
             </div>
