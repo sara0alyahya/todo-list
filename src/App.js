@@ -81,9 +81,6 @@ class App extends Component {
           <button onClick={this.deleteItems}> Delete ! </button>
         </form>
         {list}
-        {/* <div className='qoute'>
-          <p>Made with 💜 ― SARA ALYAHYA</p>
-        </div> */}
       </div>
     );
   }

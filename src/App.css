@@ -49,10 +49,6 @@ p{
 /* .center{
  
 } */
-.labelX{
-  float: right;
-  margin-right: 20px;
-}
 .labelX:hover{
   background-color: #0f4137;
 
