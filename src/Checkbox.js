@@ -16,10 +16,11 @@ class Checkbox extends React.Component {
         // console.log(this.state);
 
         return (
-            <div className='secondDiv'>
+            <div>
 
                 {this.props.todo === "" ? "" : (
                     <div>
+                        {/* adding checkbox style  */}
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                         <div className="center">
                             <label className="labelT">
