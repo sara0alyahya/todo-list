@@ -9,7 +9,7 @@ This project is a to-do list, a user can enter a task and delete it once it's do
 - HTML 
 - CSS
 
-![Todo List](screenchoot.png)
+![Todo List](screean.png)
 
 Open [https://sara0alyahya.github.io/todo-list/](https://sara0alyahya.github.io/todo-list/) to view it in the browser.
 
