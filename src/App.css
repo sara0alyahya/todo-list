@@ -53,7 +53,10 @@ p{
   background-color: #0f4137;
 
 }
-
+.labelX{
+  float:right ;
+  margin-right: 10px
+}
 .label__checkbox {
   display: none;
 }
